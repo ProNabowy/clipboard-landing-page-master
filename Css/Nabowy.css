@@ -1,0 +1,299 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+/* any h2 and h3 have this color because the basic color of it's  */
+h2,
+h3 {
+    color: #4c545d;
+}
+:root {
+    --main-color:#239f87; 
+    --main-transation: 0.5s;
+    --main-color-of-text:#5261d8;
+}
+.container {
+    padding: 0 10px;
+    margin: 0 auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+}
+/* Madia  */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+header {
+    padding: 100px 0 30px 0;
+    background-image: url(../images/bg-header-desktop.png);
+    background-size: cover;
+}
+header .container {
+    text-align: center;
+}
+header .container .logo {
+    margin-bottom: 50px;
+}
+header .container .text,
+header .container .bottom {
+    max-width: 50%;
+    margin: 80px auto;
+}
+header .container .text h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+header .container .text p,
+header .container .bottom p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+header .container  button,
+section.three .container button {
+    padding:12px 20px;
+    background-color: var(--main-color-of-text);
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: var(--main-transation);
+}
+header .container  button:last-child,
+section.three .container button:last-child {
+    background-color: var(--main-color);
+}
+ button:hover {
+    opacity: 0.6;
+}
+header .container .bottom h3 {
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+@media (max-width:768px) {
+    header .container .text,
+    header .container .bottom {
+        max-width: 100%;
+        margin: 0;
+    }
+    header .container  button {
+        margin-bottom: 20px;
+    }
+}
+/* any section have this padding because all section the same  */
+section {
+    padding:20px 0;
+}
+section.one .container {
+    display: flex;
+    justify-content: space-between;
+}
+section.one .container .imge,
+section.one .container .parent {
+    flex-basis: 45%;
+}
+section.one .container .imge img {
+    max-width: 100%;
+}
+
+section.one .container .parent .box {
+    height: calc(100% / 3);
+}
+section.one .container .parent .box h3 {
+    margin-bottom: 20px;
+}
+section.one .container .parent .box p {
+    opacity: 0.5;
+    line-height: 1.8;
+}
+@media (max-width:991px) {
+    section.one .container {
+        flex-direction: column;
+    }
+    section.one .container .imge {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    section.one .container .parent {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    section.one .container .parent .box {
+        margin-bottom: 20px;
+    }
+}
+section.two .text {
+    max-width: 50%;
+    margin: 50px auto;
+    text-align: center;
+}
+@media (max-width:767px) {
+    section.two .text {
+        max-width: 100%;
+    }
+}
+section .text h2 {
+    margin-bottom: 20px;
+}
+section.two .imge {
+    text-align: center;
+}
+section.two img {
+    max-width: 100%;
+}
+section.three .container > .text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section.three .container > .text h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+section.three .container > .text p {
+    opacity: 0.6;
+}
+section.three .container .parent-one {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+section.three .container .parent-one .box {
+    text-align: center;
+}
+section.three .container .parent-one .box img {
+    margin-bottom: 40px;
+}
+section.three .container .logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 100px 0;
+}
+section.three .Available .text {
+    max-width: 50%;
+    margin: 20px auto;
+    text-align: center;
+}
+section.three .Available .text h2 {
+    font-size: 35px;
+}
+section.three .Available .button {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+@media (max-width:767px) {
+    section.three .Available .text {
+        max-width: 100%;
+    }
+    section.three .container .logos {
+        text-align: center;
+    }
+    section.three .container .logos img,
+    section.three .Available .button button {
+        margin-bottom: 20px;
+    }
+
+}
+footer {
+    background-color: #f5f6f8;
+    padding: 40px 0;
+}
+footer  .top-footer {
+    display: flex;
+    justify-content: space-between;
+}
+footer  .top-footer .logo {
+    flex-basis: 5%;
+}
+footer  .top-footer .logo img {
+    width: 50px;
+}
+footer  .top-footer .list {
+    flex-basis: 70%;
+}
+footer  .top-footer .links {
+    max-width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer  .top-footer .links li {
+    width: calc(100% / 3);
+    margin-bottom: 30px;
+}
+footer  .top-footer .links li a {
+    color: black;
+    transition: var(--main-transation);
+    font-size: 13px;
+}
+footer  .top-footer .links li a:hover,
+footer  .top-footer .icone i:hover {
+    color: var(--main-color);
+}
+footer  .top-footer .icone {
+    flex-basis: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+footer  .top-footer .icone i {
+    transition: var(--main-transation);
+    color: #4c545d;
+    cursor: pointer;
+}
+footer .bottom-footer {
+    text-align: center;
+}
+footer .bottom-footer span:not(.active) {
+    opacity: 0.6;
+}
+footer .bottom-footer h4  {
+    font-weight: normal;
+}
+footer .bottom-footer span.active {
+    transition: var(--main-transation);
+    cursor: pointer;
+}
+footer .bottom-footer span.active:hover {
+    color: var(--main-color);
+}
+@media (max-width:767px) {
+    footer  .top-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer  .top-footer .logo,
+    footer  .top-footer .list,
+    footer  .top-footer .icone {
+        margin-bottom: 20px;
+    }
+    footer  .top-footer .list .links {
+        max-width: 100%;
+    }
+}
+/* made by ProNabowy */
